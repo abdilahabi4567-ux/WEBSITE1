@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071225">
+  <meta name="description" content="ABI STORE — Top up game, layanan digital, dan koleksi akun gaming.">
+  <title>ABI STORE — Gaming Digital Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="ABI STORE beranda">
+      <img src="assets/abi-store-logo.jpg" alt="Logo ABI STORE">
+      <span><b>ABI <i>STORE</i></b><small>GAMING DIGITAL STORE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Beranda</a><a href="#layanan">Layanan</a><a href="#stok">Katalog</a><a href="#tentang">Tentang</a>
+      <a class="nav-contact" href="https://wa.me/6289603539296" target="_blank" rel="noopener">Hubungi ABI ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> DIGITAL GAMING MARKETPLACE</div>
+        <h1>LEVEL UP YOUR<br><span>GAME.</span></h1>
+        <p class="hero-lead">Temukan kebutuhan gaming dan layanan digital favoritmu di <strong>ABI STORE</strong>. Praktis, rapi, dan langsung terhubung dengan admin.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#stok">Jelajahi katalog <span>↗</span></a><a class="btn btn-ghost" href="https://wa.me/6289603539296" target="_blank" rel="noopener">Chat admin</a></div>
+        <div class="hero-meta"><span>✦ Layanan digital</span><span>✦ Admin responsif</span><span>✦ Harga ditentukan admin</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="art-glow"></div>
+        <img src="assets/abi-store-logo.jpg" alt="Artwork dan logo ABI STORE">
+        <div class="art-caption"><span class="caption-mark">A</span><span><b>ABI STORE</b><small>YOUR DIGITAL GAME PARTNER</small></span><span class="caption-arrow">↗</span></div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="line"></span><span>01 / 04</span></div>
+    </section>
+
+    <section class="section-wrap services" id="layanan">
+      <div class="section-heading"><div><div class="eyebrow">APA YANG KAMI SEDIAKAN</div><h2>Pilih <span>layananmu.</span></h2></div><p>Semua kebutuhan gaming dalam satu tempat. Pilih layanan untuk melihat detail dan menghubungi admin.</p></div>
+      <div class="service-grid">
+        <a class="service-card" href="#stok" data-filter-link="TOP UP ALGAME"><span class="service-icon">⚡</span><span class="service-no">01</span><h3>TOP UP ALGAME</h3><p>Top up kebutuhan game favoritmu.</p><span class="service-link">Lihat layanan ↗</span></a>
+        <a class="service-card" href="#stok" data-filter-link="UNCHEK"><span class="service-icon">◈</span><span class="service-no">02</span><h3>UNCHEK</h3><p>Layanan unchek, tanyakan detail ke admin.</p><span class="service-link">Lihat layanan ↗</span></a>
+        <a class="service-card" href="#stok" data-filter-link="JASTEB"><span class="service-icon">✦</span><span class="service-no">03</span><h3>JASTEB</h3><p>Layanan JASTEB dengan informasi dari admin.</p><span class="service-link">Lihat layanan ↗</span></a>
+        <div class="service-card service-soon"><span class="service-icon">⌁</span><span class="service-no">04</span><span class="status status-soon">BELUM TERSEDIA</span><h3>PT JASTEB</h3><p>Fitur ini sedang dipersiapkan.</p><span class="service-link muted">Segera hadir</span></div>
+      </div>
+    </section>
+
+    <section class="inventory-section" id="stok">
+      <div class="section-wrap">
+        <div class="section-heading inventory-heading"><div><div class="eyebrow">KOLEKSI ABI STORE</div><h2>Katalog <span>produk.</span></h2></div><p>Stok akun Free Fire dan Mobile Legends serta layanan lainnya. Harga dan ketersediaan mengikuti pembaruan admin.</p></div>
+        <div class="catalog-tools">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari produk atau layanan..."></label>
+          <div class="filter-list" id="filterList">
+            <button class="filter-chip active" data-filter="SEMUA">Semua</button>
+            <button class="filter-chip" data-filter="TOP UP ALGAME">Top Up</button>
+            <button class="filter-chip" data-filter="UNCHEK">Unchek</button>
+            <button class="filter-chip" data-filter="JASTEB">JASTEB</button>
+            <button class="filter-chip" data-filter="AKUN EPEP">Akun EPEP</button>
+            <button class="filter-chip" data-filter="AKUN ML">Akun ML</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-state" id="emptyState" hidden><span>⌁</span><h3>Belum ada produk</h3><p>Stok untuk kategori ini belum ditambahkan. Silakan hubungi admin ABI STORE.</p><a href="https://wa.me/6289603539296" target="_blank" rel="noopener">Tanya admin ↗</a></div>
+        <div class="stock-note"><span>ⓘ</span> Harga dan stok dapat berubah. Konfirmasi ketersediaan kepada admin sebelum melakukan pembayaran.</div>
+      </div>
+    </section>
+
+    <section class="section-wrap about" id="tentang">
+      <div class="about-mark">ABI<span>.</span></div>
+      <div class="about-copy"><div class="eyebrow">KENALAN DENGAN KAMI</div><h2>Gaming needs,<br><span>made simple.</span></h2><p>ABI STORE hadir untuk membantu kebutuhan digital gaming kamu. Lihat katalog, pilih produk, lalu hubungi admin untuk konfirmasi stok, harga, dan proses pemesanan.</p><a class="btn btn-primary" href="https://wa.me/6289603539296" target="_blank" rel="noopener">Hubungi ABI STORE ↗</a></div>
+      <div class="contact-card"><small>CONTACT ADMIN</small><h3>Butuh bantuan?</h3><p>Hubungi admin untuk bertanya tentang produk, stok, atau harga terbaru.</p><a href="https://wa.me/6289603539296" target="_blank" rel="noopener"><span class="wa-icon">◉</span><span><b>WhatsApp ABI STORE</b><small>0896 0353 9296</small></span><strong>↗</strong></a><div class="contact-divider"></div><span class="ig-handle">INSTAGRAM <b>@Abistore213</b></span></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand footer-brand" href="#home"><img src="assets/abi-store-logo.jpg" alt=""><span><b>ABI <i>STORE</i></b><small>GAMING DIGITAL STORE</small></span></a><span>© <span id="year"></span> ABI STORE. All rights reserved.</span><a href="#home">Kembali ke atas ↑</a></div></footer>
+
+  <button class="admin-fab" id="adminToggle" title="Panel admin">⚙ <span>Admin</span></button>
+  <div class="admin-backdrop" id="adminBackdrop" hidden>
+    <section class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <div class="admin-top"><div><div class="eyebrow">STORE MANAGEMENT</div><h2 id="adminTitle">Panel <span>Admin.</span></h2></div><button class="close-admin" id="closeAdmin" aria-label="Tutup">×</button></div>
+      <p class="admin-warning">Panel ini berjalan di browser perangkat ini (localStorage), belum memakai database atau login aman. Jangan gunakan untuk menyimpan data rahasia.</p>
+      <form id="productForm" class="admin-form">
+        <input type="hidden" id="productId">
+        <label>Nama produk<input id="productName" required maxlength="70" placeholder="Contoh: Akun FF Sultan"></label>
+        <div class="form-row"><label>Kategori<select id="productCategory"><option>TOP UP ALGAME</option><option>UNCHEK</option><option>JASTEB</option><option>AKUN EPEP</option><option>AKUN ML</option></select></label><label>Harga (Rp)<input id="productPrice" type="number" min="0" step="1000" placeholder="Contoh: 50000" required></label></div>
+        <label>Deskripsi<textarea id="productDescription" rows="3" maxlength="180" placeholder="Detail produk / keterangan stok"></textarea></label>
+        <label>URL gambar (opsional)<input id="productImage" type="url" placeholder="https://..."></label>
+        <div class="form-actions"><button class="btn btn-primary" type="submit" id="saveProduct">Simpan produk</button><button class="btn btn-ghost" type="button" id="resetForm">Bersihkan</button></div>
+      </form>
+      <div class="admin-list-head"><h3>Daftar stok</h3><button id="resetDemo" class="text-button">Reset contoh</button></div>
+      <div id="adminProductList" class="admin-product-list"></div>
+      <button class="export-button" id="exportData">Unduh cadangan stok (JSON) ↓</button>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
